@@ -1,3 +1,6 @@
+const container = document.querySelector("#container");
+
+
 gridcells(16);
 container.style["grid-template-columns"] = gridlayout(16);
 container.style["grid-template-rows"] = gridlayout(16);
@@ -9,11 +12,11 @@ function gridcells(num) {
     newCell.setAttribute("class", "cell");
     container.appendChild(newCell);
   }
-  const cells = document.querySelectorAll(".cell");
+  const cells = document.querySelectorAll(".cell")
   cells.forEach((cell) => {
-    cell.onmouseover = function(e) {
+    cell.addEventListener("mouseover", function(e) {
       e.target.style["background-color"] = "rgba(0 ,0, 0, 1)";
-    }
+    });
   });
 }
 
@@ -30,9 +33,9 @@ function party() {
 function normal() {
   const cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
-    cell.onmouseover = function(e) {
+    cell.addEventListener("mouseover", function(e) {
       e.target.style["background-color"] = "rgba(0 ,0, 0, 1)";
-    }
+    });
   });
 }
 
